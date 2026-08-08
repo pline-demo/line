@@ -1,0 +1,3 @@
+<?php
+namespace App\Services; use App\Core\{Application,Response};
+final class PermissionService{public function __construct(private Application $app){} public function can(array $u,string $p):bool{if((int)$u['is_super_admin']===1)return true;$s=$this->app->db()->pdo()->prepare('SELECT 1 FROM user_roles ur JOIN role_permissions rp ON rp.role_id=ur.role_id JOIN permissions pe ON pe.id=rp.permission_id WHERE ur.user_id=? AND pe.name=? LIMIT 1');$s->execute([$u['id'],$p]);return (bool)$s->fetchColumn();} public function require(array $u,string $p):void{if(!$this->can($u,$p)){Response::status(403); echo $this->app->view()->render('errors/403'); exit;}}}

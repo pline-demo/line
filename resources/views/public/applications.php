@@ -1,0 +1,1 @@
+<section class="page"><h1>Uygulamalarımız</h1><div class="grid"><?php foreach($applications as $a):?><article class="card"><img src="<?=e($a['main_image'])?>" alt="<?=e($a['title'])?>"><h2><?=e($a['title'])?></h2><p><?=e($a['description'])?></p><a href="/uygulama/<?=e($a['slug'])?>">Detay</a></article><?php endforeach;?></div></section>

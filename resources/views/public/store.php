@@ -1,0 +1,1 @@
+<section class="page"><h1><?=e($store['name']??'PERLINA Mağazamız')?></h1><p><?=e($store['address']??'Adres bilgisi admin panelinden yönetilir.')?></p><p><?=e($store['working_hours']??'')?></p><a class="btn" href="<?=e($store['directions_url']??'#')?>">Yol Tarifi Al</a><div class="map"><?=$store['maps_embed']??''?></div></section>

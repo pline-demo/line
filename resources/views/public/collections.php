@@ -1,0 +1,1 @@
+<section class="page"><h1>Koleksiyonlar</h1><div class="grid"><?php foreach($collections as $c):?><article class="card"><img src="<?=e($c['cover_image'])?>" alt="<?=e($c['name'])?>"><h2><?=e($c['name'])?></h2><p><?=e($c['short_description'])?></p><a href="/koleksiyon/<?=e($c['slug'])?>">Koleksiyonu aç</a></article><?php endforeach;?></div></section>

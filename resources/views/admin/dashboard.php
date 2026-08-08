@@ -1,0 +1,1 @@
+<h1>Dashboard</h1><div class="stats"><?php foreach($stats as $k=>$v):?><article><span><?=e($k)?></span><b><?=e($v)?></b></article><?php endforeach;?></div><h2>Son aktiviteler</h2><div class="table"><?php foreach($logs as $l):?><p><?=e($l['created_at'])?> · <?=e($l['username']??'Sistem')?> · <?=e($l['description'])?></p><?php endforeach;?></div>
