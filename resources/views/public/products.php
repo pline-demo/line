@@ -1,0 +1,1 @@
+<section class="page"><h1>Ürünler</h1><div class="grid"><?php foreach($products as $p):?><article class="card"><img src="<?=e($p['main_image'])?>" alt="<?=e($p['name'])?>"><h2><?=e($p['name'])?></h2><p><?=e($p['short_description'])?></p><a href="/urun/<?=e($p['slug'])?>">Detay</a></article><?php endforeach;?></div></section>

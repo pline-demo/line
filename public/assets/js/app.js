@@ -1,0 +1,1 @@
+document.querySelector('[data-nav]')?.addEventListener('click',()=>document.querySelector('.nav')?.classList.toggle('open'));document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',()=>{const b=f.querySelector('button');if(b){b.disabled=true;b.textContent='Gönderiliyor...';}}));

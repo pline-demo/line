@@ -1,0 +1,1 @@
+<h1><?=e(ucfirst($module))?></h1><p>Bu modül RBAC ile korunur ve veritabanı tablolarına bağlı yönetim ekranları için ayrılmıştır. CRUD işlemleri aynı güvenli servis/repository katmanını kullanacak şekilde genişletilebilir.</p>
